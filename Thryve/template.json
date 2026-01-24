@@ -1,0 +1,124 @@
+{
+    "Actor": {
+
+        "types": [
+            "character"
+        ],
+
+        "character": {
+            
+            "race": 0,
+            "background": 0,
+
+            "charDetails": {
+                "nickname": "",
+                "age": 21,
+                "height": 180,
+                "weight": 75,
+                "hairColo": "blonde",
+                "eyeColo": "green",
+                "family": "",
+                "appearance": "",
+                "background": "",
+                "goals": ""
+            },
+
+            "attributes": {
+                "willpower": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "Intellect": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "Strength": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "Agility": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                },
+                "Charisma": {
+                    "start": 0,
+                    "raised": 0,
+                    "bonus": 0
+                }
+            },
+            "baseValues": {
+                "Body": {
+                    "value": 0,
+                    "max": 0,
+                    "reg": 0,
+                    "sustained": 0
+                },
+                "stability": {
+                    "value": 0,
+                    "max": 0,
+                    "reg": 0,
+                    "sustained": 0
+                },
+                "magic gems": {
+                    "value": 0,
+                    "max": 0,
+                    "reg": 0,
+                    "sustained": 0
+                },
+                "resistance": {
+                    "Biological": 0,
+                    "Arcane": 0,
+                    "Tech": 0
+                },
+                "evasion": 0,
+                "speed": 0
+            }
+        }
+    },
+
+    "Item": {
+
+        "types":[
+            "trait",
+            "skill",
+            "template"
+        ],
+
+        "templates": {
+
+            "generalItems": {
+                "weight": 10,
+                "value": 100,
+                "description": ""
+            }
+        },
+
+        "trait": {
+            "description": "",
+            "bonus": [{
+                "type": "",
+                "value": ""
+            }]
+        },
+
+        "skill": {
+            "description": "",
+            "attribute1": "",
+            "attribute2": "",
+            "value": 0
+        },
+
+        "template": {
+            "description": "",
+            "type": "race",
+            "bonus": [{
+                "type": "",
+                "value": ""
+            }]
+        }
+    }
+}
