@@ -1,0 +1,72 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Weapon Name"/></h1>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+    <a class="item" data-tab="abilities">Abilities</a>
+  </nav>
+
+  <section class="sheet-body">
+    
+    <div class="tab" data-group="primary" data-tab="description">
+      <div class="form-group stacked">
+        <label>Description</label>
+        {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="details">
+      <div class="form-group">
+        <label>Weapon Type</label>
+        <select name="system.weaponType">
+          <option value="melee" {{#if (eq system.weaponType "melee")}}selected{{/if}}>Melee (STR)</option>
+          <option value="ranged" {{#if (eq system.weaponType "ranged")}}selected{{/if}}>Ranged (AGL)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Attack Die</label>
+        <input type="text" name="system.attackDie" value="{{system.attackDie}}" placeholder="1d6"/>
+      </div>
+
+      <div class="form-group">
+        <label>Damage Die</label>
+        <input type="text" name="system.damageDie" value="{{system.damageDie}}" placeholder="1d6, 2d6, 1d8, etc."/>
+      </div>
+
+      <div class="form-group">
+        <label>Range</label>
+        <input type="text" name="system.range" value="{{system.range}}" placeholder="Melee, 30ft, 60ft, etc."/>
+      </div>
+
+      <div class="combat-rolls">
+        <h3>Combat Rolls</h3>
+        <button type="button" class="roll-attack">
+          <i class="fas fa-crosshairs"></i> Roll Attack
+        </button>
+        <button type="button" class="roll-damage">
+          <i class="fas fa-burst"></i> Roll Damage
+        </button>
+      </div>
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="abilities">
+      <div class="form-group stacked">
+        <label>Active Ability</label>
+        <textarea name="system.activeAbility" rows="6" placeholder="Describe the weapon's active ability (requires action to use)...">{{system.activeAbility}}</textarea>
+      </div>
+
+      <div class="form-group stacked">
+        <label>Passive Ability</label>
+        <textarea name="system.passiveAbility" rows="6" placeholder="Describe the weapon's passive ability (always active)...">{{system.passiveAbility}}</textarea>
+      </div>
+    </div>
+
+  </section>
+</form>

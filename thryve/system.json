@@ -1,0 +1,39 @@
+{
+  "id": "thryve",
+  "title": "Thryve TTRPG",
+  "description": "A 1d10 + variable skill dice TTRPG system",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "authors": [{
+    "name": "Phel"
+  }],
+  "esmodules": ["scripts/thryve.js"],
+  "styles": ["styles/thryve.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "manifest": "https://raw.githubusercontent.com/synhder/thryve/main/system.json",
+  "download": "https://github.com/synhder/thryve/archive/refs/heads/main.zip",
+  "documentTypes": {
+    "Actor": {
+      "character": {},
+      "npc": {},
+      "monster": {}
+    },
+    "Item": {
+      "skill": {},
+      "item": {},
+      "weapon": {},
+      "armor": {}
+    }
+  },
+  "socket": false
+}
